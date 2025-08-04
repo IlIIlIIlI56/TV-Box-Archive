@@ -4,8 +4,7 @@ Este é o repositório oficial para o guia da documentação de descaracterizaç
 
 ## Estrutura do Projeto
 
-- `index.html`: Página de loading.
-- `home.html`: Página principal.
+- `index.html`: Página principal.
 - `style.css`: Estilos do site.
 - `images/`: Imagens de uso variado.
 - `main-images/`: Imagens base.
