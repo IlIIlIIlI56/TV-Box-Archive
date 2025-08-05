@@ -1,1 +1,92 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
 
+html, body {
+  height: 100%;
+  background: gray;
+}
+
+.linha-topo {
+  height: 5px;
+  background-color: #e4084f; /* Unioeste */
+  width: 100%;
+  position: absolute; /* ou fixed */
+  z-index: 10;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  color: white;
+  padding: 10px 20px;
+  max-height: 65px;
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;  /* mantém a proporção */
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 24px;
+  color: black;
+}
+
+.logo p {
+  margin: 0;
+  font-size: 14px;
+  color: black;
+}
+
+.idiomas a {
+  color: black;
+  margin-left: 10px;
+  border-right: 60px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+footer {
+  border-top: 1px solid #A9A9A9; /* Linha divisória */
+  background: linear-gradient(to bottom, #040732, #004d99, #040732);
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+.logo {
+  margin-top: 3px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-texto h1 {
+  margin: 0;
+  font-size: 24px;
+  color: black;
+}
+
+.logo-texto p {
+  margin: 0;
+  font-size: 14px;
+  color: black;
+}
+
+.flag-icon {
+  width: 20px;
+  height: 14px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+main {
+  flex: 1;
+}
