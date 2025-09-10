@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LABIOT - TV Box Archive</title>
+  <link rel="icon" href="../../main-images/Unioeste-Logo.png">
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <div class="linha-topo"></div>
+  <header>
+    <div class="logo">
+      <a href="../../index.html"><img src="../../main-images/Unioeste-Logo.png" alt="Unioeste" class="logo-img"></a>
+      <div class="logo-texto">
+        <h1>LABIOT - TV Box Archive</h1>
+        <p>Descaracterização e recuperação — Amlogic, Allwinner, Rockchip</p>
+      </div>
+    </div>
+    <div class="idiomas">
+      <a href="#"><img src="../../main-images/brasil.png" alt="pt" class="flag-icon"></a>
+      <a href="#"><img src="../../main-images/great-britain.png" alt="en" class="flag-icon"></a>
+      <a href="#"><img src="../../main-images/spain.png" alt="es" class="flag-icon"></a>
+    </div>
+  </header>
+  <main>
+    <h1>Descaracterização do modelo Azamérica I7</h1>
+
+    <h2>🔎 Sumário</h2>
+    <ul>
+      <li><a href="#valores-de-hardware">Valores de Hardware</a></li>
+      <li><a href="#imagem-do-modelo">Imagem do Modelo</a></li>
+      <li><a href="#suporte-de-rede">Suporte de Rede</a></li>
+      <li><a href="#desempenho">Desempenho</a></li>
+      <li><a href="#processo-detalhado">Processo Detalhado</a></li>
+      <li><a href="#preparacao-para-instalacao">Preparação para Instalação</a></li>
+      <li><a href="#configuracao-inicial-do-armbian">Configuração Inicial do Armbian</a></li>
+      <li><a href="#instalacao-do-sistema-no-armamento-interno">Instalação do Sistema no Armazenamento Interno</a></li>
+      <li><a href="#erros-comuns">Erros Comuns</a></li>
+    </ul>
+
+    <h3 id="valores-de-hardware">Valores de Hardware (Obtidas por meio da plataforma AIDA64)</h3>
+    <table>
+      <tr><th>Medida</th><th>Valor detectado</th><th>Valor nominal</th></tr>
+      <tr><td>CPU H6</td><td>1344 MHz</td><td>x</td></tr>
+      <tr><td>Armazenamento interno</td><td>32</td><td>32 GB</td></tr>
+      <tr><td>Memória RAM</td><td>3 GB</td><td>3 GB</td></tr>
+    </table>
+
+    <h3 id="imagem-do-modelo">Imagem do Modelo</h3>
+    <img src="azamericai7-case.png" alt="Imagem do case" width="300">
+    <img src="azamericai7-placa.png" alt="Imagem do hardware" width="300">
+
+    <h3 id="suporte-de-rede">Suporte de Rede</h3>
+    <table>
+      <tr><th>Módulo</th><th>Driver</th><th>WiFi</th><th>Ethernet</th><th>Bluetooth</th></tr>
+      <tr><td>sp6330</td><td>Desconhecido</td><td>🟠 Não Testado</td><td>🟠 Não Testado</td><td>🟠 Não Testado</td></tr>
+    </table>
+
+    <h2 id="desempenho">📈 Desempenho</h2>
+    <p>Confira nossa <a href="material-de-apoio/glossario.md">metodologia de avaliação</a>.</p>
+    <table>
+      <tr><th>Atividades</th><th>Avaliação</th></tr>
+      <tr><td>Navegar em páginas</td><td>🔴 RUIM</td></tr>
+      <tr><td>Assistir vídeos</td><td>🔴 RUIM</td></tr>
+      <tr><td>Jogar</td><td>🔴 RUIM</td></tr>
+      <tr><td>Utilizar como servidor</td><td>🟢 BOM</td></tr>
+    </table>
+
+    <h2 id="processo-detalhado">📖 Processo detalhado</h2>
+    <h3>Cuidados necessários</h3>
+    <ul>
+      <li>Sempre ejete o cartão SD pelo sistema operacional antes de removê-lo do computador.</li>
+    </ul>
+
+    <h3 id="preparacao-para-instalacao">Preparação para instalação</h3>
+    <p><em>Disclaimer1: Caso algum termo não seja compreendido, verifique-o na seção <a href="material-de-apoio/glossario.md">glossário</a></em></p>
+    <ol>
+      <li>Baixe os softwares e arquivos necessários no computador/notebook.
+        <ul>
+          <li>Recomendado: <a href="https://etcher.balena.io/">Balena Etcher</a></li>
+          <li>Alternativa: <a href="https://rufus.ie/pt_BR/">Rufus</a></li>
+          <li>Alternativa: <a href="https://medium.com/@emusyoka759/creating-a-bootable-usb-in-ubuntu-with-dd-9fb3debc0814">dd</a></li>
+          <li>Imagem do Armbian: <a href="https://unioestebr-my.sharepoint.com/:f:/g/personal/renan_silva15_unioeste_br/EqHcdypdHa9Pv_f-PVuo-iIBmPCIqzTHJy4T-UmWCaJpcw?e=VFOSBx">Armbian 24.11.0 Kernel 6.6.44 (H6)</a></li>
+        </ul>
+      </li>
+      <li>No computador/notebook, insira o cartão SD e utilize um dos programas para gravar a imagem.</li>
+      <li>Remova o cartão SD do computador/notebook (ejete corretamente).</li>
+      <li>Insira o cartão SD no leitor da Azamérica I7 desligada e conectada a um monitor via HDMI.</li>
+      <li>Diferente de outros modelos, não há necessidade de pressionar botão reset ou update para inicializar o Armbian.</li>
+    </ol>
+
+    <div class="legal">⚠️ Lembre-se: o sistema está funcionando via cartão SD. Caso removido, o firmware original inicializará novamente. Nunca retire o cartão SD com o aparelho ligado.</div>
+
+    <h3 id="configuracao-inicial-do-armbian">Configuração Inicial do Armbian</h3>
+    <p>Após inicializar pela primeira vez, o sistema pedirá informações como nome de usuário, senha e zona de tempo. Caso haja dúvida, utilize nosso guia.</p>
+
+    <h3 id="instalacao-do-sistema-no-armamento-interno">Instalação do Sistema no Armazenamento Interno</h3>
+    <div class="legal">⚠️ Esta ação apagará todos os dados do armazenamento da TV Box. Faça backup antes caso seja necessário.</div>
+    <p>Após a configuração, execute:</p>
+    <pre><code>sudo armbian-install</code></pre>
+    <ul>
+      <li>Selecione "Install/Update the bootloader on eMMC(/dev/mmcblk2)"</li>
+      <li>Confirme as opções solicitadas</li>
+    </ul>
+
+    <h2 id="erros-comuns">❌ Erros Comuns</h2>
+    <ol>
+      <li>Caso não haja vídeo após a etapa 8 da preparação, verifique o cabo HDMI. Se estiver correto, o sistema pode não ser compatível.</li>
+    </ol>
+  </main>
+<footer>
+    <div style="max-width:1100px;margin:0 auto">LABIOT - Laboratory of the Internet Of Things · Unioeste</div>
+</footer>
+</body>
