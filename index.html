@@ -1,33 +1,151 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TV Box - Archive</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LABIOT - Descaracterização TV Box</title>
+  <link rel="icon" href="main-images/Unioeste-Logo.png">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/jpg" href="main-images/Unioeste-Logo.png" />
 </head>
 <body>
-  <!-- Conteúdo -->
   <div class="linha-topo"></div>
   <header>
     <div class="logo">
-    <a href="index.html">
-      <img src="main-images/Unioeste-Logo.png" alt="Unioeste" class="logo-img">
-        </a>
+      <a href="index.html"><img src="main-images/Unioeste-Logo.png" alt="Unioeste" class="logo-img"></a>
       <div class="logo-texto">
         <h1>LABIOT - TV Box Archive</h1>
-        <p>Laboratory of the Internet of Things - Website</p>
+        <p>Descaracterização e recuperação — Amlogic, Allwinner, Rockchip</p>
       </div>
     </div>
     <div class="idiomas">
-      <a href="#"><img src="main-images/brasil.png" alt="🇧🇷" class="flag-icon"></a>
-      <a href="#"><img src="main-images/great-britain.png" alt="🇺🇸" class="flag-icon"></a>
-      <a href="#"><img src="main-images/spain.png" alt="🇪🇸" class="flag-icon"></a>
+      <a href="#"><img src="main-images/brasil.png" alt="pt" class="flag-icon"></a>
+      <a href="#"><img src="main-images/great-britain.png" alt="en" class="flag-icon"></a>
+      <a href="#"><img src="main-images/spain.png" alt="es" class="flag-icon"></a>
     </div>
   </header>
-  <h1>Descaracterização de TV Box</h1>
-  <p>Projeto colaborativo com tutoriais e arquivos para remover limitações impostas por TV Boxes Android.</p>
-  <a href="modelos.html">Ver Modelos Compatíveis</a>
+
+  <main>
+    <h1 class="page-title">Descaracterização de TV Box</h1>
+    <p class="lead">Projetos, guias e imagens de recuperação para boxes Android baseados em Amlogic, Allwinner e Rockchip. Conteúdo técnico voltado a estudantes e laboratórios. Leia o aviso legal antes de prosseguir.</p>
+
+    <div class="card legal">
+      <strong>Aviso legal e de segurança</strong>
+      <p>Este site documenta métodos técnicos para manutenção, recuperação e substituição de firmware em dispositivos. Não incentive práticas ilegais. Proceda apenas em dispositivos de sua propriedade ou com autorização. Risco de brick, perda de garantia e perda de dados. A equipe do LABIOT não se responsabiliza por danos.</p>
+    </div>
+
+    <section class="grid" aria-label="plataformas e recursos">
+      <div class="card">
+        <h3>Plataformas suportadas</h3>
+        <div class="chip-list">
+          <div class="chip">Amlogic (S9xx, S9xxx)</div>
+          <div class="chip">Allwinner (H3, H5)</div>
+          <div class="chip">Rockchip (RK3288, RK3328)</div>
+          <div class="chip">U-Boot</div>
+          <div class="chip">Android Recovery</div>
+        </div>
+        <p style="margin-top:10px">Guias básicos, imagens e utilitários. Inclui instruções de backup NAND e uso de USB Burning Tool e aml-flash.</p>
+        <a class="btn" href="#modelos">Ver modelos</a>
+      </div>
+
+      <div class="card">
+        <h3>Guias rápidos</h3>
+        <ul>
+          <li><strong>Backup de eMMC</strong> — como fazer dump com adaptador eMMC.</li>
+          <li><strong>Flash com USB</strong> — preparar imagem e usar ferramentas oficiais.</li>
+          <li><strong>Bootloader</strong> — recuperar U-Boot via TTL e USB.</li>
+        </ul>
+        <a class="ghost" href="#guias">Abrir guias</a>
+      </div>
+
+      <div class="card">
+        <h3>Downloads e imagens</h3>
+        <p>Ícones de referência a repositórios e mirrors. Sempre verifique checksums e assinaturas antes de gravar.</p>
+        <table>
+          <thead><tr><th>Arquivo</th><th>Plataforma</th><th>Tamanho</th></tr></thead>
+          <tbody>
+            <tr><td>recovery-amlogic.img</td><td>Amlogic</td><td>—</td></tr>
+            <tr><td>stock-allwinner.img</td><td>Allwinner</td><td>—</td></tr>
+            <tr><td>rk-recovery.img</td><td>Rockchip</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>Ferramentas</h3>
+        <ul>
+          <li>USB Burning Tool (Allwinner)</li>
+          <li>RK Batch Tool (Rockchip)</li>
+          <li>aml-flash / Amlogic USB tools</li>
+          <li>adb, fastboot, heimdall (genérico)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="modelos" style="margin-top:20px">
+      <div class="card">
+        <h3>Modelos conhecidos</h3>
+        <p>Lista para referência. Adicione modelos ao repositório do LABIOT com firmware e instruções.</p>
+        <table>
+          <thead><tr><th>Marca / Modelo</th><th>SoC</th><th>Notas</th></tr></thead>
+          <tbody>
+            <tr><td>Modelo X (Genérico)</td><td>Amlogic S905X</td><td>Recovery via USB-Amlogic</td></tr>
+            <tr><td>Modelo Y</td><td>Allwinner H3</td><td>TTL + USB burning</td></tr>
+            <tr><td>Modelo Z</td><td>Rockchip RK3328</td><td>RKTool disponível</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="guias" style="margin-top:20px">
+      <div class="card">
+        <h3>Guias detalhados (exemplos)</h3>
+        <h4>1) Backup e dump de eMMC</h4>
+        <ol>
+          <li>Desligue o aparelho. Abra o case com cuidado.</li>
+          <li>Localize a eMMC. Use adaptador USB-eMMC ou leitor.</li>
+          <li>Conecte ao PC Linux. Use <code>lsblk</code> para identificar o dispositivo.</li>
+          <li>Execute: <code>sudo dd if=/dev/sdX of=backup_emmc.img bs=4M status=progress</code></li>
+          <li>Verifique checksum: <code>sha256sum backup_emmc.img</code></li>
+        </ol>
+
+        <h4>2) Flash Amlogic via USB</h4>
+        <ol>
+          <li>Coloque box no modo FEL ou USB de boot (instruções por modelo).</li>
+          <li>Use ferramenta oficial ou <code>aml-flash</code> para gravar a imagem.</li>
+          <li>Verifique logs e reenvie se houver erros.</li>
+        </ol>
+
+        <h4>3) Recuperar U-Boot via TTL</h4>
+        <ol>
+          <li>Localize pinos TTL. Use adaptador USB-TTL 3.3V.</li>
+          <li>Conecte TX/RX/GND. Não conectar 5V.</li>
+          <li>Abra terminal (115200 8N1). Interrompa boot e grave novo U-Boot.</li>
+        </ol>
+      </div>
+    </section>
+
+    <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+      <a class="btn" href="#guias">Ver guias</a>
+      <a class="ghost" href="#modelos">Modelos</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <div style="max-width:1100px;margin:0 auto">LABIOT - Laboratório de Internet das Coisas · Unioeste · Conteúdo técnico para fins educacionais</div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const href = a.getAttribute('href');
+        if(href.length>1){
+          e.preventDefault();
+          const el = document.querySelector(href);
+          if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      })
+    })
+  </script>
 </body>
 </html>
