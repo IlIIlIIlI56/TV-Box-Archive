@@ -1,3 +1,3 @@
 Copyright 2025 Labiot - Laboratory of the Internet of Things
 
-Todos os direitos reservados. Nenhuma parte deste trabalho pode ser reproduzida, distribuída ou utilizada de qualquer forma sem a permissão expressa dos envolvidos.
+Todos os direitos reservados. Nenhuma parte deste trabalho pode ser reproduzida, distribuída ou utilizada de qualquer forma sem a permissão expressa dos envolvidos. É permitida a utilização acadêmica para projetos universitários ou pessoais.
